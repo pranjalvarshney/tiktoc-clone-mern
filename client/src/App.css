@@ -10,9 +10,9 @@ html {
 
 .app-video-container {
   position: relative;
-  height: 80vh;
+  height: 90vh;
   width: 80%;
-  max-width: 500px;
+  max-width: 360px;
   border-radius: 20px;
   overflow: scroll;
   scroll-snap-type: y mandatory;
