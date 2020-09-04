@@ -5,7 +5,15 @@ import { VideoTopBar } from "./VideoTopBar"
 import { VideoSideBar } from "./VideoSideBar"
 import PlayArrowIcon from "@material-ui/icons/PlayArrow"
 
-export const Video = () => {
+export const Video = ({
+  song,
+  username,
+  videoUrl,
+  description,
+  likes,
+  messages,
+  shares,
+}) => {
   const videoRef = useRef(null)
   const [play, setPlay] = useState(false)
   const handleVideoPress = () => {
@@ -18,19 +26,19 @@ export const Video = () => {
   }
   return (
     <div className='video'>
-      <VideoTopBar />
+      <VideoTopBar song={song} />
       <video
         onClick={handleVideoPress}
         className='video-css'
         ref={videoRef}
-        src='https://assets.mixkit.co/videos/preview/mixkit-woman-walking-on-beach-towards-boulders-1012-large.mp4'
+        src={videoUrl}
         loop
       />
       {!play ? (
         <PlayArrowIcon fontSize='large' className='video-pause-icon' />
       ) : null}
-      <VideoSideBar likes={2124} messages={432} shares={929} />
-      <VideoFooter />
+      <VideoSideBar likes={likes} messages={messages} shares={shares} />
+      <VideoFooter username={username} description={description} />
     </div>
   )
 }

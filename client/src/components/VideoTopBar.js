@@ -1,11 +1,11 @@
 import React from "react"
 import MusicNoteIcon from "@material-ui/icons/MusicNote"
 
-export const VideoTopBar = () => {
+export const VideoTopBar = ({ song }) => {
   return (
     <div className='video-topbar'>
       <MusicNoteIcon className='music-icon' />
-      <small>lyrics of song</small>
+      <small>{song}</small>
     </div>
   )
 }

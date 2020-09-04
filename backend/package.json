@@ -1,0 +1,20 @@
+{
+  "name": "tiktok_mern_clone",
+  "version": "1.0.0",
+  "description": "MERN",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Pranjal Varshney",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.10.2",
+    "morgan": "^1.10.0"
+  }
+}

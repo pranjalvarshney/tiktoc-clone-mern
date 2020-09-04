@@ -1,0 +1,23 @@
+{
+  "name": "tiktoc-clone",
+  "version": "1.0.0",
+  "description": "",
+  "main": "tech.js",
+  "dependencies": {
+    "concurrently": "^5.3.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "dev": "concurrently \"cd client && npm start \" \"cd backend && nodemon app.js \" "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pranjalvarshney/tictoc-clone-mern.git"
+  },
+  "author": "Pranjal Varshney",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pranjalvarshney/tictoc-clone-mern/issues"
+  },
+  "homepage": "https://github.com/pranjalvarshney/tictoc-clone-mern#readme"
+}
