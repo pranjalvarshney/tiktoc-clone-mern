@@ -2,26 +2,22 @@ const Video = require("../models/Video")
 
 exports.showAllPost = (req, res) => {
   Video.find().exec((err, posts) => {
-    console.log("1")
     if (err) {
       return res.status(400).json({
         error: "An error occured!",
       })
     }
-    console.log("2")
 
-    return res.json(posts)
+    res.json(posts)
   })
 }
 
 exports.createPost = (req, res) => {
-  const post = req.body
-  Video.create(post, (err, res) => {
+  const post = new Video(req.body)
+  post.save((err, result) => {
     if (err) {
-      return res.status(400).json({
-        error: "An error occured!",
-      })
+      return res.json(err)
     }
-    res.json("success")
+    res.json(result)
   })
 }

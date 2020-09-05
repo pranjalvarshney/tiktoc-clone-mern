@@ -5,9 +5,8 @@ const videoSchema = new mongoose.Schema({
     type: String,
   },
   description: String,
-  videoUrl: {
+  videourl: {
     type: String,
-    required: true,
   },
   likes: Number,
   shares: Number,
