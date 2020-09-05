@@ -9,7 +9,7 @@ const Video = require("./models/Video")
 //middlewares
 
 app.use(morgan("dev"))
-app.use(express.json)
+app.use(express.json())
 app.use(cors())
 app.use("/api", require("./routes/video"))
 
