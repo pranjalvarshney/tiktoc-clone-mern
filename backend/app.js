@@ -15,7 +15,7 @@ app.use("/api", require("./routes/video"))
 
 const Port = process.env.PORT || 6000
 
-const uri = `mongodb+srv://admin:admin123@cluster0.zr541.mongodb.net/data?retryWrites=true&w=majority`
+const uri = `mongodb+srv://${MONGO_USER}:${MONGO_PASS}@cluster0.zr541.mongodb.net/data?retryWrites=true&w=majority`
 mongoose.connect(
   uri,
   { useCreateIndex: true, useNewUrlParser: true, useUnifiedTopology: true },
