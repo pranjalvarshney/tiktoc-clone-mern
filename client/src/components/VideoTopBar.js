@@ -5,7 +5,9 @@ export const VideoTopBar = ({ song }) => {
   return (
     <div className='video-topbar'>
       <MusicNoteIcon className='music-icon' />
-      <small>{song}</small>
+      <marquee scrollamount='5'>
+        <small>{song}</small>
+      </marquee>
     </div>
   )
 }
